@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vlntn.de</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <nav class="nav">
+            <ul>
+                <a href="#header"><li class="green-font">Start</li></a>
+                <a href="#education"><li class="green-font">Education</li></a>
+                <a href="#projects"><li class="green-font">Projects</li></a>
+                <a href="#stuff"><li class="green-font">Stuff</li></a>
+                <a href="#tetris" class="tetris"><li class="green-font">Tetris</li></a>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content">
+        <div id="greeting" class="light-font">
+            <div class="container">
+                <div class="dot"></div>
+                <p class="typing middle-font">Hello, I'm <span class="green-font valentin"> Valentin!</span></p>
+                <p class="desc left-align small-font">I am a currently a computer science student with focus on <span class="text-marker" style="--delay: 1.2s;">security</span> and <nobr><span class="text-marker" style="--delay: 1.8s;"> software development</span>.</nobr></p>
+            </div>
+        </div>
+
+        <div id="education"></div>
+
+        <div id="projects"></div>
+
+        <div id="stuff"></div>
+
+        <div id="tetris"></div>
+
+    </div>
+    
+    <div id="footer" class="dark-font">
+        <p>&COPY; 2025 Valentin Linhardt. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+<svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+  <defs>
+    <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+    </filter>
+  </defs>
+</svg>
+
+</html>

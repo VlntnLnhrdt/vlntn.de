@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: monospace, 'Courier New', Courier;
+    list-style: none;
+    text-decoration: none;
+
+    --zb-white: #fff;
+    --zb-dark: #222222;
+    --zb-green: #3dfdba;
+    --zb-green-op: #3dfdbae9;
+    --zb-blue: #3d9ffd;
+    --zb-purple: #b43dfd;
+    --zb-orange: #ff7847;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--zb-dark) 0%, var(--zb-green) 100%);
+}
+
+.green-font {
+    color: var(--zb-green);
+}
+
+.light-font {
+    color: var(--zb-white);
+}
+
+.dark-font {
+    color: var(--zb-dark);
+}
+
+.smaller-font {
+    font-size: 1em;
+}
+
+.small-font {
+    font-size: 1.2em;
+}
+
+.middle-font {
+    font-size: 1.5em;
+}
+
+.big-font {
+    font-size: 3em;
+}
+
+.left-align {
+    text-align: left;
+}
+
+#header {
+    height: 5em;
+    padding: 1em;
+}
+
+#header .nav {
+    height: 100%;
+}
+
+#header .nav ul {
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    opacity: 1;
+}
+
+#header .nav ul a {
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+#header .nav ul:hover a {
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+#header .nav ul:hover a:hover {
+    opacity: 1;
+}
+
+/* Die animierte Linie */
+#header .nav ul a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--zb-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Linie wird eingeblendet */
+#header .nav ul a:hover::after {
+    transform: scaleX(1);
+}
+
+@media (orientation: portrait) {
+    #header {
+        height: auto;
+    }
+
+    #header .nav ul {
+        flex-direction: column;
+    }
+}
+
+#header .tetris {
+    cursor: url(tetris.cur), pointer;
+}
+
+#greeting, #education, #projects, #tetris {
+    min-height: 400px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+}
+
+
+#footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+
+#greeting .container {
+    margin: auto;
+    padding: 2em;
+    max-width: 30em;
+    border-left: solid 5px var(--zb-green);
+    text-align: left;
+}
+
+#greeting .container .valentin {
+    padding-left: 1em;
+}
+
+#greeting .container .dot {
+    position: relative;
+    top: -3.5em;
+    left: -3.5em;
+    width: 0;
+    height: 0;
+    border-radius: 2em;
+    border: solid 5px var(--zb-green);
+    box-shadow: 0px 0px 50px var(--zb-green);
+    background-color: var(--zb-green);
+    animation-delay: 0.3s;
+    animation: growdot 1s forwards, pulse 1.5s infinite;
+}
+
+@keyframes growdot {
+    from {
+        width: 0;
+        height: 0;
+        left: -2.5em;
+        top: -2em;
+    }
+    to {
+        width: 2em;
+        height: 2em;
+        left: -3.5em;
+    }
+}
+
+@keyframes pulse {
+    50% {
+        box-shadow: 0px 0px 20px var(--zb-green);
+    }
+}
+
+#greeting .container p {
+    margin-top: 1em;
+}
+
+#greeting .container .typing {
+    display: inline-flex;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--zb-white);
+    animation: typing 1.7s steps(20, end) forwards, blink 0.7s infinite;
+    max-width: fit-content;
+}
+
+/* Typewriter-Animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 13em;
+    }
+}
+
+/* Cursor-Blinken */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#greeting .container .text-marker{
+    position:relative;
+    display: inline;
+}
+
+#greeting .container .text-marker:before{
+    content:"";
+    background-color:var(--zb-blue);
+    width:-2;
+    opacity: 0;
+    height:1em;
+    position:absolute;
+    z-index:-1;
+    filter:url(#marker-shape);
+    left:-0.25em;
+    top:0.1em;
+    padding:0 0.25em;
+    animation: text-marking 0.8s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+
+@keyframes text-marking {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 0.8;
+    }
+}
