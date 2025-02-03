@@ -1,2 +1,2 @@
-# zero-bugs.de
-Just my semi-personal Webpage
+# vlntn.de
+This is my personal webpage, dont expect to fancy stuff, just a little playground for webdesign ideas and to procrastinate rather than to study.
