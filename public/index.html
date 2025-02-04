@@ -1,59 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vlntn.de</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vlntn.de</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-    <div id="header">
-        <nav class="nav">
-            <ul>
-                <a href="#header"><li class="green-font">Start</li></a>
-                <a href="#education"><li class="green-font">Education</li></a>
-                <a href="#projects"><li class="green-font">Projects</li></a>
-                <a href="#stuff"><li class="green-font">Stuff</li></a>
-                <a href="#tetris" class="tetris"><li class="green-font">Tetris</li></a>
-            </ul>
-        </nav>
-    </div>
-
-    <div id="content">
-        <div id="greeting" class="light-font">
-            <div class="container">
-                <div class="dot"></div>
-                <p class="typing middle-font">Hello, I'm <span class="green-font valentin"> Valentin!</span></p>
-                <p class="desc left-align small-font">I am a currently a computer science student with focus on <span class="text-marker" style="--delay: 1.2s;">security</span> and <nobr><span class="text-marker" style="--delay: 1.8s;"> software development</span>.</nobr></p>
-                <p>This page is still under construction (03.02.2025)</p>
-            </div>
+        <div id="header">
+            <nav class="nav">
+                <ul>
+                    <a href="#header"><li class="green-font">Start</li></a>
+                    <a href="#projects"><li class="green-font">Projects</li></a>
+                    <a href="#stuff"><li class="green-font">Stuff</li></a>
+                    <a href="#tetris" class="tetris"><li class="green-font">Tetris</li></a>
+                </ul>
+            </nav>
         </div>
 
-        <div id="education"></div>
 
-        <div id="projects"></div>
+        <div id="content">
+            <div id="greeting" class="light-font">
+                <div class="container">
+                    <div class="dot"></div>
+                    <p class="typing middle-font">Hello, I'm <span class="green-font valentin"> Valentin!</span></p>
+                    <p class="desc left-align small-font">I am currently a computer science student with focus on <span class="text-marker" style="--delay: 1.2s;">security</span> and <nobr><span class="text-marker" style="--delay: 1.8s;"> software development</span>.</nobr></p>
+                    <p>This page is still under construction (04.02.2025)</p>
+                </div>
+                <p class="greeting-fade container"></p>
+            </div>
 
-        <div id="stuff"></div>
+            <div id="education"></div>
 
-        <div id="tetris"></div>
+            <div id="projects">
+                <div class="current">
+                    <div class="header flex">
+                        <p class="livedot"></p>
+                        <p class="flex big-font light-font">Current Projects</p>
+                    </div>
+                    <div class="flex project hidden">
+                        <div class="head">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="estate"><path fill="#3d9ffd" d="M20,8h0L14,2.74a3,3,0,0,0-4,0L4,8a3,3,0,0,0-1,2.26V19a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V10.25A3,3,0,0,0,20,8ZM14,20H10V15a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1Zm5-1a1,1,0,0,1-1,1H16V15a3,3,0,0,0-3-3H11a3,3,0,0,0-3,3v5H6a1,1,0,0,1-1-1V10.25a1,1,0,0,1,.34-.75l6-5.25a1,1,0,0,1,1.32,0l6,5.25a1,1,0,0,1,.34.75Z"></path></svg>
+                            <p class="bigger-font light-font">Real estate valuation program</p>
+                        </div> 
+                        <div class="nothead">
+                            <p class="small-font light-font">A webapplication to evaluate real estate in Germany on basis of multiple publicly available data like Real estate comparison portals and many more.</p>
+                            <p class="smaller-font blue-font right-align">Currently in development</p>
+                        </div>
+                    </div>
+                    <div class="flex project hidden">
+                        <div class="head">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="file-medical-alt"><path fill="#3d9ffd" d="M18,18a1,1,0,0,0-1,1,1,1,0,0,1-1,1H6a1,1,0,0,1-1-1V5A1,1,0,0,1,6,4h5V7a3,3,0,0,0,3,3h3v1a1,1,0,0,0,2,0V9s0,0,0-.06a1.31,1.31,0,0,0-.06-.27.32.32,0,0,0,0-.09,1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19l-.1,0A1.14,1.14,0,0,0,12.07,2H6A3,3,0,0,0,3,5V19a3,3,0,0,0,3,3H16a3,3,0,0,0,3-3A1,1,0,0,0,18,18ZM13,5.41,15.59,8H14a1,1,0,0,1-1-1ZM20,14H17.5a1,1,0,0,0-.71.29l-1.24,1.25-2.8-3.2a1,1,0,0,0-1.46-.05L9.59,14H8a1,1,0,0,0,0,2h2a1,1,0,0,0,.71-.29L12,14.46l2.8,3.2a1,1,0,0,0,.72.34h0a1,1,0,0,0,.71-.29L17.91,16H20a1,1,0,0,0,0-2Z"></path></svg>
+                            <p class="bigger-font light-font">Clinical Application Project</p>
+                        </div> 
+                        <div class="nothead">
+                            <p class="small-font light-font">In this project, I will develop a framework for nuclear medicine at the Klinikum Rechts der Isar in Munich which contains modules like the segmentation of human organs using <a href="https://github.com/wasserth/TotalSegmentator">TotalSegmentator</a>, a tool  for segmentation of most major anatomical structures in any CT or MR image.</p>
+                            <p class="smaller-font blue-font right-align">Starting in March</p>
+                        </div>
+                    </div>
+                    <div class="flex project hidden">
+                        <div class="head">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="file-bookmark-alt"><path fill="#3d9ffd" d="M7.5,10h1a1,1,0,0,0,0-2h-1a1,1,0,0,0,0,2Zm4,6h-4a1,1,0,0,0,0,2h4a1,1,0,0,0,0-2Zm0-4h-4a1,1,0,0,0,0,2h4a1,1,0,0,0,0-2Zm6.92-2.62a1,1,0,0,0-.21-1.09l-6-6h0a1.07,1.07,0,0,0-.28-.19.32.32,0,0,0-.09,0L11.56,2H5.5a3,3,0,0,0-3,3V19a3,3,0,0,0,3,3h6a1,1,0,0,0,0-2h-6a1,1,0,0,1-1-1V5a1,1,0,0,1,1-1h5V7a3,3,0,0,0,3,3h4A1,1,0,0,0,18.42,9.38ZM13.5,8a1,1,0,0,1-1-1V5.41L15.09,8Zm7,4h-5a1,1,0,0,0-1,1v8a1,1,0,0,0,.53.88,1,1,0,0,0,1-.05L18,20.53,20,21.83A1,1,0,0,0,21.5,21V13A1,1,0,0,0,20.5,12Zm-1,7.12-.94-.63a1,1,0,0,0-1.12,0l-.94.63V14h3Z"></path></svg>
+                            <p class="bigger-font light-font">Bachelor Thesis</p>
+                        </div> 
+                        <div class="nothead">
+                            <p class="small-font light-font">My Bachelor's Thesis will be about generating malicious traffic (DOS-Attack, Port-Scanning, ...), analyzing it and developing algorithms to detect, categorize and evaluate such traffic.</p>
+                            <p class="smaller-font blue-font right-align">Starting in April</p>
+                        </div>
+                    </div>
 
-    </div>
-    
-    <div id="footer" class="dark-font">
-        <p>&COPY; 2025 Valentin Linhardt. All Rights Reserved.</p>
-    </div>
+                    <div class="flex project hidden">
+                        <div class="head">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="file-shield-alt"><path fill="#3d9ffd" d="M10.5,20h-5a1,1,0,0,1-1-1V5a1,1,0,0,1,1-1h5V7a3,3,0,0,0,3,3h3a1,1,0,0,0,2,0V9s0,0,0-.06a1.31,1.31,0,0,0-.06-.27l0-.09a1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19.32.32,0,0,0-.09,0L11.56,2H5.5a3,3,0,0,0-3,3V19a3,3,0,0,0,3,3h5a1,1,0,0,0,0-2Zm2-14.59L15.09,8H13.5a1,1,0,0,1-1-1ZM7.5,8a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm13.63,5.86a1,1,0,0,0-.84-.2,2.77,2.77,0,0,1-2.2-.47,1,1,0,0,0-1.18,0,2.78,2.78,0,0,1-2.2.47,1,1,0,0,0-1.21,1V17a4.6,4.6,0,0,0,1.84,3.69L16.9,21.8a1,1,0,0,0,1.2,0l1.56-1.16A4.6,4.6,0,0,0,21.5,17V14.63A1,1,0,0,0,21.13,13.86ZM19.5,17a2.62,2.62,0,0,1-1,2.09l-1,.72-1-.72a2.62,2.62,0,0,1-1-2.09V15.72a4.68,4.68,0,0,0,2-.55,4.68,4.68,0,0,0,2,.55Zm-9-.95h-3a1,1,0,0,0,0,2h3a1,1,0,0,0,0-2Zm1-4h-4a1,1,0,0,0,0,2h4a1,1,0,0,0,0-2Z"></path></svg>
+                            <p class="bigger-font light-font">Seminar Paper</p>
+                        </div> 
+                        <div class="nothead">
+                            <p class="small-font light-font">I will write a Paper about a topic in IT-Security, preferably about Software Supply Chains, Investigating Security Fails or Cyber-Physical Systems Security. The matching will happen at the end of February.</p>
+                            <p class="smaller-font blue-font right-align">Starting in April</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-</body>
+            <div id="stuff"></div>
 
-<svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
-  <defs>
-    <filter id="marker-shape">
-      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
-      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
-    </filter>
-  </defs>
-</svg>
+            <div id="tetris"></div>
+
+        </div>
+        
+        <div id="footer" class="dark-font">
+            <p>&COPY; 2025 Valentin Linhardt. All Rights Reserved.</p>
+        </div>
+
+    </body>
+
+    <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+        <defs>
+            <filter id="marker-shape">
+            <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="script.js"></script>
 
 </html>

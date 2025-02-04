@@ -23,6 +23,10 @@ body {
     color: var(--zb-green);
 }
 
+.blue-font {
+    color: var(--zb-blue);
+}
+
 .light-font {
     color: var(--zb-white);
 }
@@ -43,12 +47,29 @@ body {
     font-size: 1.5em;
 }
 
+.bigger-font {
+    font-size: 2.2em;
+}
+
 .big-font {
     font-size: 3em;
 }
 
 .left-align {
     text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.flex {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #header {
@@ -151,36 +172,13 @@ body {
 
 #greeting .container .dot {
     position: relative;
-    top: -3.5em;
+    top: -4.5em;
     left: -3.5em;
-    width: 0;
-    height: 0;
+    width: 2em;
+    height: 2em;
     border-radius: 2em;
     border: solid 5px var(--zb-green);
     box-shadow: 0px 0px 50px var(--zb-green);
-    background-color: var(--zb-green);
-    animation-delay: 0.3s;
-    animation: growdot 1s forwards, pulse 1.5s infinite;
-}
-
-@keyframes growdot {
-    from {
-        width: 0;
-        height: 0;
-        left: -2.5em;
-        top: -2em;
-    }
-    to {
-        width: 2em;
-        height: 2em;
-        left: -3.5em;
-    }
-}
-
-@keyframes pulse {
-    50% {
-        box-shadow: 0px 0px 20px var(--zb-green);
-    }
 }
 
 #greeting .container p {
@@ -245,3 +243,95 @@ body {
         opacity: 0.8;
     }
 }
+
+#greeting .greeting-fade {
+    border-left: solid 5px var(--zb-green);
+    padding-bottom: 2em;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+
+
+
+#projects {
+    /*=================*/
+}
+
+#projects .current {
+    text-align: center;
+}
+
+#projects .current .header {
+    background-color: var(--zb-dark);
+    justify-content: center;
+    padding: 1em;
+    box-shadow: 0 0 40px var(--zb-dark);
+}
+
+#projects .current .header .livedot {
+    height: 2em;
+    width: 2em;
+    background-color: red;
+    border-radius: 100%;
+    margin-right: 2em;
+    box-shadow: 0px 0px 50px red;
+    animation: pulse-red 1.5s infinite;;
+}
+
+@keyframes pulse-red {
+    50% {
+        box-shadow: 0px 0px 20px red;
+    }
+}
+
+#projects .current .project {
+    background-color: var(--zb-dark);
+    width: 100%;
+    padding: 1em 0;
+    box-shadow: 0 0 40px var(--zb-dark);
+}
+
+#projects .current .project .head {
+    max-width: 30%;
+}
+
+#projects .current .project .head .icon {
+    height: 8em;
+}
+
+#projects .current .project .nothead {
+    max-width: 60%;
+}
+
+#projects .current .project p {
+    padding: 1em;
+}
+
+#projects .current a {
+    color: var(--zb-green);
+    text-decoration: underline;
+}
+
+#projects .current .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+#projects .current .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+
+/* Ich würde die glaube eher direkt unter current
+    projects ranhängen, alles schwarzer hintergrund,
+    icons in hell, ggf blau oder grün und zwischen
+    den projekten blaue linien
+
+fliegen von unten an linie hoch (ggf Pfeil), bei Kontakt
+    soll die Kontaktfläche kurz aufleuchten,
+*/
