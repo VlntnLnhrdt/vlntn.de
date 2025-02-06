@@ -15,6 +15,10 @@
     --zb-orange: #ff7847;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(to bottom, var(--zb-dark) 0%, var(--zb-green) 100%);
 }
@@ -70,6 +74,11 @@ body {
     justify-content: space-evenly;
     align-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.link {
+    color: var(--zb-green);
+    text-decoration: underline;
 }
 
 #header {
@@ -139,10 +148,6 @@ body {
     cursor: url(tetris.cur), pointer;
 }
 
-#greeting, #education, #projects, #tetris {
-    min-height: 400px;
-}
-
 #content {
     display: flex;
     flex-direction: column;
@@ -179,7 +184,15 @@ body {
     border-radius: 2em;
     border: solid 5px var(--zb-green);
     box-shadow: 0px 0px 50px var(--zb-green);
+    animation: pulse-green 3s infinite ease-in-out;
 }
+
+@keyframes pulse-green {
+    50% {
+        box-shadow: 0px 0px 20px var(--zb-green);
+    }
+}
+
 
 #greeting .container p {
     margin-top: 1em;
@@ -276,7 +289,7 @@ body {
     border-radius: 100%;
     margin-right: 2em;
     box-shadow: 0px 0px 50px red;
-    animation: pulse-red 1.5s infinite;;
+    animation: pulse-red 1.5s infinite ease-in-out;
 }
 
 @keyframes pulse-red {
@@ -293,7 +306,7 @@ body {
 }
 
 #projects .current .project .head {
-    max-width: 30%;
+    width: 30%;
 }
 
 #projects .current .project .head .icon {
@@ -301,14 +314,14 @@ body {
 }
 
 #projects .current .project .nothead {
-    max-width: 60%;
+    width: 60%;
 }
 
 #projects .current .project p {
     padding: 1em;
 }
 
-#projects .current a {
+#projects .curret a {
     color: var(--zb-green);
     text-decoration: underline;
 }
@@ -326,12 +339,112 @@ body {
     transform: translateY(0);
 }
 
+@media (orientation: portrait) {
+    #projects .current .project {
+        flex-direction: column;
+    }
 
-/* Ich würde die glaube eher direkt unter current
-    projects ranhängen, alles schwarzer hintergrund,
-    icons in hell, ggf blau oder grün und zwischen
-    den projekten blaue linien
+    #projects .current .project .head {
+        width: auto;
+    }
 
-fliegen von unten an linie hoch (ggf Pfeil), bei Kontakt
-    soll die Kontaktfläche kurz aufleuchten,
-*/
+    #projects .current .project .nothead {
+        width: auto;
+    }
+
+    #projects .current .project .time {
+        text-align: center;
+    }
+}
+
+#skills {
+    padding: 8em 0;
+    width: 100%;
+}
+
+#skills .skillset {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#skills .skillset .show {
+    animation: skillShowcase 2s ease-in-out forwards;
+}
+
+@keyframes skillShowcase {
+    0% {
+        opacity: 0;
+    }
+
+    
+
+    from {
+        box-shadow: -50px 20px 30px var(--zb-dark);
+    }
+
+    to {
+        box-shadow: 20px 20px 30px var(--zb-dark);
+    }
+    
+
+    100% {
+        box-shadow: 20px 20px 30px var(--zb-dark);
+        opacity: 1;
+    }
+}
+
+#skills .skillset .skill {
+    opacity: 0;
+    height: 12em;
+    min-width: 10em;
+    border-radius: 2em;
+    background-color: var(--zb-dark);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+#skills .skillset .skill .skillicon {
+    position: absolute;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#skills .skillset .skill:hover {
+    cursor: pointer;
+}
+
+#skills .skillset .skill .skillicon svg{
+    height: 100%;
+    width: 100%;
+}
+
+#skills .skillset .skill:hover .skillicon{
+    opacity: 0;
+    filter: blur(10px);
+}
+
+#skills .skillset .skill .skilldescr{
+    opacity: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1em;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#skills .skillset .skill:hover .skilldescr{
+    opacity: 1;
+}
+
+#skill .skillset .skill .skilldescr .skillname {
+    color: var(--zb-green);
+}
