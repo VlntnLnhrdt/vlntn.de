@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="../vv.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TPV | Orthanc Template Daten</title>
+<style>
+  :root {
+    --white:    #f4f4f4;
+    --black:    #262626;
+    --darkgrey: #333333;
+    --grey:     #767575;
+    --lightgrey:#ddd;
+    --lightergrey:#eee;
+    --darkerblue:#123255;
+    --darkblue: #295f99;
+    --blue:     #3070b3;
+    --lightblue-3:#a3cfff;
+    --lightblue-2:#b9daff;
+    --lightblue-1:#d5e9ff;
+    --orange:   #ff8430;
+
+    --evenbigger: 8rem;
+    --bigger: 1.8rem;
+    --big: 1.4rem;
+    --normal: 1rem;
+    --small: 0.8rem;
+    --smaller: 0.6rem; 
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--lightergrey);
+    color: var(--darkgrey);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    text-align: center;
+    background-color: var(--white);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    color: var(--darkblue);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: var(--normal);
+    margin-bottom: 2rem;
+  }
+
+  .download-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: var(--big);
+    color: var(--white);
+    background-color: var(--blue);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .download-btn:hover {
+    background-color: var(--darkblue);
+    transform: scale(1.05);
+  }
+
+  .download-btn:active {
+    background-color: var(--orange);
+    transform: scale(0.98);
+  }
+
+  footer {
+    margin-top: 1.5rem;
+    font-size: var(--small);
+    color: var(--grey);
+  }
+
+  a {
+    color: var(--blue);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>TotalPetViewer Orthanc Template Daten</h1>
+    <p>Nachfolgend kannst du zwei Beispielpatienten für Orthanc herunterladen</p>
+    <a class="download-btn" href="https://vlntn.de/tpvexamples/orthanc_templates.zip" download="orthanc_templates.zip">
+      Download
+    </a>
+    <footer>
+      Datei sind ursprünglich von <a href="https://www.dicomlibrary.com/" target="_blank">www.dicomlibrary.com</a>, wurden aber für den <a href="https://github.com/VlntnLnhrdt/TotalPETView.git" target="_blank">TotalPetViewer</a> angepasst.
+    </footer>
+  </div>
+</body>
+</html>
